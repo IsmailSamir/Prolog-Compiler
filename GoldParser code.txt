@@ -1,0 +1,91 @@
+"Name"     = 'Prolog'
+"Author"   = 'AlAshba7'
+"Version"  = 'Prolog 1.0'
+"About"    = 'A short description of the grammar'
+"Case Sensitive" = True
+"Start Symbol" = <Pro>
+
+! -------------------------------------------------
+! Character Sets
+! -------------------------------------------------
+
+{WS}          = {Whitespace} - {CR} -{LF}
+{CapitalLetter}=[ABCDEFGHIJKLMNOPQRSTUVWXYZ_]
+{SmallLetter}=[abcdefghijklmnopqrstuvwxyz] 
+{underscoreNumeric}={AlphaNumeric}+[_-?]  
+{sngl}=['']
+{dble}=["]    
+! -------------------------------------------------
+! Terminals
+! -------------------------------------------------
+rel ={Digit}+'.'{Digit}+
+Int ={Digit}+
+!symb = {Digit}{underscoreNumeric}*
+!ch = {Letter}
+Identifier = {CapitalLetter}{AlphaNumeric}*
+preRule ={SmallLetter}{underscoreNumeric}*
+single={sngl}
+double={dble}
+Comment Line ='%'
+Comment Start='/*'
+Comment End='*/'
+
+Whitespace    = {WS}+
+NewLine       = {CR}{LF} |{CR} | {LF}
+
+! -------------------------------------------------
+! Rules
+! -------------------------------------------------
+<Pro> ::= <nl Opt><Predicate><nl Opt><Clauses><nl Opt><Goal><nl Opt>
+<nl>     ::= NewLine <nl> |  NewLine
+<nl Opt> ::= NewLine <nl Opt> | 
+!remeber to split sections to test
+!predicate section
+<Predicate> ::= 'predicates'<nl Opt><prestat>
+<prestat> ::='nondeterm'<Rule><nl><prestat> | <Rule><nl><prestat> |
+<Rule> ::= preRule'('<datatype> <commaP>').'|preRule'.'
+<datatype> ::= 'integer' |'symbol'|'string'|'char'|'real'
+<commaP>::= ','<datatype> <commaP>|
+
+!clauses section
+<Clauses> ::= 'clauses'<nl> <FactOrRule>
+<firstRule> ::=preRule '(' <switch> <commaC> ')'|preRule
+<FactOrRule> ::= <GeneralRule> <CluRules> <nl><FactOrRule>|
+<commaC> ::= ','<nl Opt> <switch> <commaC>|       
+<CluRules> ::=  <switch dot>|':-' <switchbody> <commab> <switch dot>
+<switchbody> ::= <GeneralRule> | <Expression>|'!'
+<commab> ::= ','<nl Opt><switchbody><commab> |';'<nl Opt> <switchbody><commab>|                       
+<GeneralRule> ::= preRule '(' <switch> <commaC>  |<firstRule>
+<Parameters> ::= Int|single <Or> <sing>|double <Or> <dob>|rel|preRule 
+<sing> ::= single |
+<dob>::= double| 
+<Or> ::= Identifier<Or> |preRule <Or>|Int<Or>|single <Or> |double<Or>|'-' <Or> |':'<Or>|
+<switch> ::= Identifier | <Parameters>
+<switch dot>::= ')'|').' |'.'    
+
+
+<Expression>  ::= <Expression> '>' <Add Exp> 
+               |  <Expression> '<'  <Add Exp> 
+               |  <Expression> '<=' <Add Exp> 
+               |  <Expression> '>=' <Add Exp>
+               |  <Expression> '=' <Add Exp>    !Equal
+               |  <Expression> '<>' <Add Exp>   !Not equal
+               | <Add Exp>
+                
+
+<Add Exp>     ::= <Add Exp> '+' <Mult Exp>
+               |  <Add Exp> '-' <Mult Exp>
+               |  <Mult Exp> 
+
+<Mult Exp>    ::= <Mult Exp> '*' <Negate Exp> 
+               |  <Mult Exp> '/' <Negate Exp> 
+               |  <Negate Exp> 
+
+<Negate Exp>  ::= '-'<Value> 
+                |  <Value> 
+
+<Value>        ::= Identifier|rel|Int|'('<Add Exp> ')'
+
+
+! Goal section 
+<Goal> ::='goal'<nl> <GeneralRule> <switch dot> 

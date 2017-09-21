@@ -1,0 +1,29 @@
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\bin\Debug\compiler.exe.config
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\obj\Debug\compiler.csprojResolveAssemblyReference.cache
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\obj\Debug\compiler.Form1.resources
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\obj\Debug\compiler.Properties.Resources.resources
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\obj\Debug\compiler.csproj.GenerateResource.Cache
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\bin\Debug\compiler.exe
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\bin\Debug\compiler.pdb
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\bin\Debug\CalithaLib.dll
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\bin\Debug\GoldParserEngine.dll
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\obj\Debug\compiler.exe
+c:\users\yassmoon\documents\visual studio 2013\Projects\compiler\compiler\obj\Debug\compiler.pdb
+C:\Users\ismail\Downloads\compiler\compiler\bin\Debug\compiler.exe.config
+C:\Users\ismail\Downloads\compiler\compiler\obj\Debug\compiler.exe
+C:\Users\ismail\Downloads\compiler\compiler\obj\Debug\compiler.pdb
+C:\Users\ismail\Downloads\compiler\compiler\bin\Debug\compiler.exe
+C:\Users\ismail\Downloads\compiler\compiler\bin\Debug\compiler.pdb
+C:\Users\ismail\Downloads\compiler\compiler\obj\Debug\compiler.csprojResolveAssemblyReference.cache
+C:\Users\ismail\Downloads\compiler\compiler\obj\Debug\compiler.Form1.resources
+C:\Users\ismail\Downloads\compiler\compiler\obj\Debug\compiler.Properties.Resources.resources
+C:\Users\ismail\Downloads\compiler\compiler\obj\Debug\compiler.csproj.GenerateResource.Cache
+D:\FCIS\4th\Compiler\Project\compiler\compiler\bin\Debug\compiler.exe.config
+D:\FCIS\4th\Compiler\Project\compiler\compiler\obj\Debug\compiler.exe
+D:\FCIS\4th\Compiler\Project\compiler\compiler\obj\Debug\compiler.pdb
+D:\FCIS\4th\Compiler\Project\compiler\compiler\bin\Debug\compiler.exe
+D:\FCIS\4th\Compiler\Project\compiler\compiler\bin\Debug\compiler.pdb
+D:\FCIS\4th\Compiler\Project\compiler\compiler\obj\Debug\compiler.csprojResolveAssemblyReference.cache
+D:\FCIS\4th\Compiler\Project\compiler\compiler\obj\Debug\compiler.Form1.resources
+D:\FCIS\4th\Compiler\Project\compiler\compiler\obj\Debug\compiler.Properties.Resources.resources
+D:\FCIS\4th\Compiler\Project\compiler\compiler\obj\Debug\compiler.csproj.GenerateResource.Cache
